@@ -1,0 +1,254 @@
+#body{
+    position:fixed;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    object-fit: cover;
+    margin: 0 auto;
+    width: 1333px;
+    height: 599px;
+    overflow: hidden;
+}
+
+.slider::after{
+    width: 1350;
+    height: 599;
+    position: fixed;
+    inset: 0;
+}
+
+.slides{
+    width: 400%;
+    height: 475px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    position: relative;
+    transition: 3s;
+    width: 25%
+}
+
+.slide img{
+    width: 1350px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1350px;
+    margin-top: -1px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border:2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .09s;
+}
+
+.manual-btn:not(:Last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #FFF
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .09s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 1350px;
+    margin-top: 474px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFF;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: #FFF;
+}
+
+header {
+margin-top: -10px;
+margin-left: 0px;
+display: flex;
+align-items: center;
+column-gap: 64px;
+
+width: 100%;
+max-width: 14440px;
+background: pink;
+}
+
+header img {
+    padding-bottom: 5px;
+    width: 80px;
+    align-items: center;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+
+    list-style: none;
+}
+
+
+li {
+    display: block;
+    width: 220px;
+    float: left;
+    text-align: center;
+    padding: 2%;
+}
+
+.links_link {
+    font-family: 'Lucida Sans Unicode';
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.links_link:hover {
+    color: darkred;
+}
+
+.links_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 60%;
+    height: 1px;
+    background: darkred;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.links_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.container {
+    background: #e9e9e9;
+    margin-top: 80px;
+    margin-left: 200px;
+    display: inline-flex;
+}
+
+.container img {
+    width: 500px;
+    height: 375px;
+    float: left;
+    margin-right: 50px;
+}
+
+.container p{
+    text-shadow: 3px 3px 13px grey;
+    font-size: large;
+    font-family: sans-serif;
+    width: 350px;
+    line-height: 35px;
+    margin-top: 70px;
+}
+
+.Ser {
+    background: #b8cad4;
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Ser p{
+    width: 600px;
+    margin-left: 350px;
+ line-height: 35px;
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bold;
+}
+
+.receitas{
+    margin-top: 30px;
+display: inline-flex;
+}
+
+.receitas img {
+    float: left;
+}
+
+.receitas h1 {
+ font-size: 35  px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
